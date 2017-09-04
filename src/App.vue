@@ -1,6 +1,7 @@
 <template>
   <div>
     <todo-list v-bind:todos="todos"></todo-list>
+    <create-todo v-on:add-todo="addTodo"></create-todo>
   </div>
 </template>
 
@@ -40,6 +41,12 @@ export default {
     createTodo (newTodo) {
       this.todos.push(newTodo)
       sweetalert('Success!', 'To-Do created!', 'success')
+    },
+    addTodo (title) {
+      this.todos.push({
+        title,
+        done: false
+      })
     }
   }
 }
