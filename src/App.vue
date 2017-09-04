@@ -7,11 +7,13 @@
 <script>
 import sweetalert from 'sweetalert'
 import TodoList from './components/TodoList'
+import CreateTodo from './components/CreateTodo'
 
 export default {
   name: 'app',
   components: {
-    TodoList
+    TodoList,
+    CreateTodo
   },
   data () {
     return {
